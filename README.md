@@ -15,6 +15,8 @@ mission.dict_attack()
 to start a Brute-Force attack:
 
 mission.brute_attack()
+
+PS: currently, brute-force attacks do not look for white-spaces in the password string and you really shouldn't try a full scale brute-force attack unless you have a supercomputer cause it can take ages.
 ===============================================================
 
 If you have a custom dictionary list file you want to use instead of the included dictionary (which is advisable, since the included dict  contains words only), you can convert it to  pickle using the  gen_dict() function.
