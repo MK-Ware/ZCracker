@@ -10,11 +10,15 @@ mission = zc.CrackZip('d:\lockedzip.zip')
 
 to start a dictionary attack:
 
-mission.dict_attack()
+p = mission.dict_attack()
+
+print('password found:', p)
 
 to start a Brute-Force attack:
 
-mission.brute_attack()
+p = mission.brute_attack(min_length=5, max_length=6, space_n=4)
+
+print('password found:', p)
 
 PS: currently, brute-force attacks do not look for white-spaces in the password string and you really shouldn't try a full scale brute-force attack unless you have a supercomputer cause it can take ages.
 ===============================================================
