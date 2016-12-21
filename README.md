@@ -6,7 +6,7 @@ Example:
 
 import ZCracker as zc
 
-mission = zc.CrackZip('d:\lockedzip.zip')
+mission = zc.CrackZip('d:\\lockedzip.zip')
 
 to start a dictionary attack:
 
