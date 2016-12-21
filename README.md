@@ -7,6 +7,7 @@ import ZCracker as zc
 mission = zc.CrackZip('d:\lockedzip.zip')
 
 to start a dictionary attack:
+
 mission.dict_attack()
 
 to start a Brute-Force attack:
@@ -17,6 +18,7 @@ If you have a custom dictionary list file you want to use instead of the include
 
 Example:
 from ZCracker import gen_dict
+
 gen_dict('dictionary.txt', 'dictionary.pickle', separator='\n')
 
 Note that if the passwords in your dictionary.txt file  are  by anything other  a new line (which is rare), you must pass the limiter as the separator argument.
