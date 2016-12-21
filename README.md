@@ -3,7 +3,9 @@
 =========A zip password cracker written in Python by python-scripter==========
 
 Example:
+
 import ZCracker as zc
+
 mission = zc.CrackZip('d:\lockedzip.zip')
 
 to start a dictionary attack:
@@ -11,12 +13,14 @@ to start a dictionary attack:
 mission.dict_attack()
 
 to start a Brute-Force attack:
+
 mission.brute_attack()
 ===============================================================
 
 If you have a custom dictionary list file you want to use instead of the included dictionary (which is advisable, since the included dict  contains words only), you can convert it to  pickle using the  gen_dict() function.
 
 Example:
+
 from ZCracker import gen_dict
 
 gen_dict('dictionary.txt', 'dictionary.pickle', separator='\n')
