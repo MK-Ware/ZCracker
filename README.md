@@ -27,7 +27,7 @@ from ZCracker import gen_dict
 
 gen_dict('dictionary.txt', 'dictionary.pickle', separator='\n')
 
-Note that if the passwords in your dictionary.txt file  are  by anything other  a new line (which is rare), you must pass the limiter as the separator argument.
+Note that if the passwords in your dictionary.txt file  are separated by anything other  a new line (which is rare), you must pass the limiter as the separator argument.
 
 For example, of  you have a blank line between every 2  passwords:
 gen_dict('dictionary.txt', 'dictionary.pickle', separator='\n\n')
