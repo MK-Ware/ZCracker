@@ -235,7 +235,7 @@ class CrackRar:
         if not found:
             return None
 
-def selector(self):
+def selector():
     '''Lets the user take a look at the characters
     used in brute-force attacks'''
 
