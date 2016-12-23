@@ -239,7 +239,7 @@ def selector(self):
     '''Lets the user take a look at the characters
     used in brute-force attacks'''
 
-    return self.space_selector
+    return {1: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 2: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 3: 'abcdefghijklmnopqrstuvwxyz', 4: '0123456789', 5: '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', 6: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 7: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 8: 'abcdefghijklmnopqrstuvwxyz0123456789', 9: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', 10: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', 11: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', 12: 'abcdefghijklmnopqrstuvwxyz!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', 13: '0123456789!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', 14: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', 15: 'abcdefghijklmnopqrstuvwxyz0123456789!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'}
 
 def gen_dict(txt_path=None, target_name='pass_dict2.pickle', separator='\n'):
     '''For performance related reasons, this module requires the dictionary list
