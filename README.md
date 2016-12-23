@@ -30,6 +30,13 @@ to start a Brute-Force attack:
 
 p = mission.brute_attack(min_length=5, max_length=6, space_n=4)
 
+If you're wondering what space_n refers to:
+
+space = zc.selector()
+
+For space_num in spaces
+   Print(space_num, ':', spaces[space_num])
+   
 print('password found:', p)
 
 PS: currently, brute-force attacks do not look for white-spaces in the password string. And you really shouldn't try a full scale brute-force attack unless you have a supercomputer cause it can take ages.
