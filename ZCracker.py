@@ -36,28 +36,19 @@ class CrackZip:
 
         found = []
 
-        if self.target_path:
-            print('Working...')
-            for pas in content:
-                b = str.encode(pas)
-                try:
+        print('Working...')
+        for pas in content:
+            b = str.encode(pas)
+            try:
+                if self.target_path:
                     z.extractall(path=self.target_path, pwd=b)
-                except Exception:
-                    pass
                 else:
-                    found.append(pas)
-                    break
-        else:
-            print('Working...')
-            for pas in content:
-                b = str.encode(pas)
-                try:
                     z.extractall(pwd=b)
-                except Exception:
-                    pass
-                else:
-                    found.append(pas)
-                    break
+            except Exception:
+                pass
+            else:
+                found.append(pas)
+                break
 
         if found:
             if save:
@@ -87,34 +78,22 @@ class CrackZip:
 
         found = []
 
-        if self.target_path:
-            print('Working...')
-            for length in range(min_length, max_length + 1):
-                attempts = product(space, repeat=length)
-                for pas in attempts:
-                    pas = ''.join(pas)
-                    b = str.encode(pas)
-                    try:
+        print('Working...')
+        for length in range(min_length, max_length + 1):
+            attempts = product(space, repeat=length)
+            for pas in attempts:
+                pas = ''.join(pas)
+                b = str.encode(pas)
+                try:
+                    if self.target_path:
                         z.extractall(path=self.target_path, pwd=b)
-                    except Exception:
-                        pass
                     else:
-                        found.append(pas)
-                        break
-        else:
-            print('Working...')
-            for length in range(min_length, max_length + 1):
-                attempts = product(space, repeat=length)
-                for pas in attempts:
-                    pas = ''.join(pas)
-                    b = str.encode(pas)
-                    try:
                         z.extractall(pwd=b)
-                    except Exception:
-                        pass
-                    else:
-                        found.append(pas)
-                        break
+                except Exception:
+                    pass
+                else:
+                    found.append(pas)
+                    break
 
         if found:
             if save:
@@ -150,26 +129,18 @@ class CrackRar:
 
         found = []
 
-        if self.target_path:
-            print('Working...')
-            for pas in content:
-                try:
+        print('Working...')
+        for pas in content:
+            try:
+                if self.target_path:
                     r.extractall(path=self.target_path, pwd=pas)
-                except Exception:
-                    pass
                 else:
-                    found.append(pas)
-                    break
-        else:
-            print('Working...')
-            for pas in content:
-                try:
                     r.extractall(pwd=pas)
-                except Exception:
-                    pass
-                else:
-                    found.append(pas)
-                    break
+            except Exception:
+                pass
+            else:
+                found.append(pas)
+                break
 
         if found:
             if save:
@@ -199,32 +170,21 @@ class CrackRar:
 
         found = []
 
-        if self.target_path:
-            print('Working...')
-            for length in range(min_length, max_length + 1):
-                attempts = product(space, repeat=length)
-                for pas in attempts:
-                    pas = ''.join(pas)
-                    try:
+        print('Working...')
+        for length in range(min_length, max_length + 1):
+            attempts = product(space, repeat=length)
+            for pas in attempts:
+                pas = ''.join(pas)
+                try:
+                    if self.target_path:
                         r.extractall(path=self.target_path, pwd=pas)
-                    except Exception:
-                        pass
                     else:
-                        found.append(pas)
-                        break
-        else:
-            print('Working...')
-            for length in range(min_length, max_length + 1):
-                attempts = product(space, repeat=length)
-                for pas in attempts:
-                    pas = ''.join(pas)
-                    try:
                         r.extractall(pwd=pas)
-                    except Exception:
-                        pass
-                    else:
-                        found.append(pas)
-                        break
+                except Exception:
+                    pass
+                else:
+                    found.append(pas)
+                    break
 
         if found:
             if save:
@@ -258,4 +218,4 @@ def gen_dict(txt_path=None, target_name='pass_dict2.pickle', separator='\n'):
     with open(r'' + target_name, 'wb') as tgt:
         pickle.dump(pwds, tgt)
 
-    return 'The given dictionary has been saved as pickle successfully!'
+return 'The given dictionary has been saved as pickle successfully!'
