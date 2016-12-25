@@ -1,4 +1,4 @@
-#ZIP password cracker written in python by MCoury AKA python-scripter
+#ZIP password cracker written in python by MCoury AKA python-scripter and 2u6z3r0
 import zipfile as zf
 from unrar import rarfile as rf
 import pickle
